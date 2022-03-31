@@ -20,6 +20,18 @@ export async function getParticipants() {
     return response.body;
 }
 
+export async function createParticipant(name, workshop_id) {
+    const response = await client
+        .from('participants')
+        .insert({
+            name:name,
+            workshop_id: workshop_id
+        });
+
+    return response.body;
+}
+
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
