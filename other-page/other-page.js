@@ -5,6 +5,7 @@ import { checkAuth, getParticipants, getWorkshops, logout } from '../fetch-utils
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
+const workshopsListEl = document.querySelector('.workshops-list');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -26,6 +27,8 @@ window.addEventListener('load', async () => {
             const participantEL = document.createElement('p');
 
             participantEL.textContent = participant.name;
+            workshopEl.append(participantEL);
+            workshopsListEl.append(workshopEl);
         }
     }
 });
