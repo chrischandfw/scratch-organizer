@@ -24,3 +24,25 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+## Description
+- We will be creating a Workshop Organizer. This app allows you to add participants to workshops.
+
+## Acceptance Criteria
+- Users should be able to see a list of workshops with participants on /workshops
+- Clicking on a participant should delete it from supabase and rerender the list of workshops
+- The /create page should have a prefilled dropdown menu with the list of workshops from supabase
+- Submitting the form on the /create page should create a new participant in the workshop and redirect the user back to the /workshops page
+
+## Rubric
+- Main branch deployed to Netlify	
+- Open PR from dev branch with Netlify deploy preview	
+- Supabase tables properly setup (submit a screenshot with your submission)	
+- Supabase policies properly setup (submit a screenshot with your submission)	
+- User sees a list of workshops on /workshops	
+- User sees a dropdown of workshops on /create	
+- User can add a partipant to a workshop	
+- User can remove a participant from a workshop	
+- ASYNC: getWorkshops() : get all workshops with their participants in supabase.	
+- ASYNC: createParticipant(participant) : create participant in supabase and attach it to a workshop	
+- ASYNC: deleteParticipant(id) : delete a participant in supabase	
