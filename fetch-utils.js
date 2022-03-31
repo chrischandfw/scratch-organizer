@@ -3,6 +3,22 @@ const SUPABASE_KEY = '';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+export async function getWorkshops() {
+    const response = await client
+        .from('jrotc_workshops')
+        .select('*, participants (*)');
+
+    return response.body;
+}
+
+export async function getParticipants() {
+    const response = await client
+        .from('participants')
+        .select('*, jrotc_workshops (*)');
+
+    return response.body;
+}
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
