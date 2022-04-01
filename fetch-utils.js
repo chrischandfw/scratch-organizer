@@ -12,10 +12,12 @@ export async function getWorkshops() {
     return response.body;
 }
 
-export async function getParticipants() {
+export async function getParticipants(someId) {
     const response = await client
         .from('participants')
-        .select('*, jrotc_workshops (*)');
+        .select('*, jrotc_workshops (*)')
+        .match({ id: someId })
+        .single();
 
     return response.body;
 }
