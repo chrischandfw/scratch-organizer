@@ -20,7 +20,7 @@ window.addEventListener('load', async () => {
     for (let workshop of workshops) {
         const optionEl = document.createElement('option');
 
-        optionEl.textContent = workshop.teams;
+        optionEl.textContent = workshop.team;
         optionEl.value = workshop.id;
 
         selectEl.append(optionEl);

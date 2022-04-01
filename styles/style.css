@@ -144,3 +144,7 @@ footer {
 	border-radius: 10px;
 }
 
+label {
+	display: block;
+}
+
