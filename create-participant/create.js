@@ -1,4 +1,4 @@
-import { createParticipant, getWorkshops } from '../fetch-utils';
+import { createParticipant, getWorkshops } from '../fetch-utils.js';
 
 const form = document.querySelector('form');
 const selectEl = document.querySelector('select');

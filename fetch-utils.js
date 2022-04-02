@@ -8,7 +8,6 @@ export async function getWorkshops() {
     const response = await client
         .from('jrotc_workshops')
         .select('*, participants (*)');
-
     return response.body;
 }
 
@@ -27,8 +26,20 @@ export async function createParticipant(name, workshop_id) {
         .from('participants')
         .insert({
             name:name,
-            workshop_id: workshop_id
+            workshop_id: workshop_id,
+            user_id: client.auth.user().id
         });
+
+    return response.body;
+}
+
+export async function deleteParticipant(id) {
+    // delete a single participant using the id argument
+    const response = await client
+        .from('participants')
+        .delete()
+        .match({ id })
+        .single();
 
     return response.body;
 }

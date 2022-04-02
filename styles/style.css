@@ -130,7 +130,7 @@ footer {
     margin: 10px;
 }
 
-.workshops.list {
+.workshops-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
