@@ -15,11 +15,11 @@ logoutButton.addEventListener('click', () => {
 window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
 
-    async function displayWorkshops() {
+    /*async function displayWorkshops() {
         const workshops = await getWorkshops();
 
         workshopsEl.textContent = '';
-    }    
+    }*/    
 	
     for (let workshop of workshops) {
         const workshopEl = document.createElement('div');
@@ -37,7 +37,7 @@ window.addEventListener('load', async () => {
             
             participantEL.addEventListener('click', async () => {
 				await deleteParticipant(participant.id);
-                displayWorkshops();
+               // displayWorkshops();
             });
 
             workshopEl.append(participantEL);

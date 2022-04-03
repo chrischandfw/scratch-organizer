@@ -44,6 +44,10 @@ export async function deleteParticipant(id) {
     return response.body;
 }
 
+/*export async function displayWorkshops() {
+
+}*/
+
 
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
