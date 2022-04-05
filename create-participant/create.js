@@ -11,8 +11,12 @@ form.addEventListener('submit', async e => {
     const data = new FormData(form);
 
     await createParticipant(data.get('name'), data.get('workshop_id'));
+
+    form.reset();
+
+    window.location.href = '../other-page';
+
 });
-form.reset();
 
 window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
