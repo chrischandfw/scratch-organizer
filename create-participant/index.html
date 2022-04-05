@@ -10,26 +10,38 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <title>Student</title>
+    <title>Add Student</title>
 </head>
 
 <body>
     <header>
         <div class="gutter-right logo">
-			<a href="../create-participant">Submit Student</a>
+			<a href="../other-page/index.html">JROTC TEAMS</a>
         </div>
-    </header>    
-    <button id="logout">Logout</button>
+    </header>
+	<button id="logout">Logout</button>
     <main>
-        <h1>JROTC TEAMS</h1>
-		<div class="workshops-list">
-			
-		</div>
+		<h2>Create Student</h2>
+		<!--<div class="workshops-list">-->
+			<form>
+				<label>
+					Name
+					<input name="name">
+				</label>
+				<label>
+					<select name="workshop_id">
+					
+					</select>
+				</label>
+				<button>Submit</button>
+			</form>
+		<!--</div>-->
+        
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./create.js"></script>
 </body>
 
 </html>
